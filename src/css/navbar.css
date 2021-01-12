@@ -1,0 +1,197 @@
+    /* The Overlay (background) */
+    
+    .overlay {
+        /* Height & width depends on how you want to reveal the overlay (see JS below) */
+        height: 100%;
+        width: 0;
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        background-color: rgb(0, 0, 0);
+        /* Black fallback color */
+        background-color: rgba(4, 107, 167, 0.9);
+        /* Black w/opacity */
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        transition: 1s;
+        /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    }
+    /* Position the content inside the overlay */
+    
+    .overlay-content {
+        position: relative;
+        top: 15%;
+        /* 15% from the top */
+        width: 100%;
+        /* 100% width */
+        text-align: center;
+        /* Centered text/links */
+        margin-top: 10px;
+        /* 30px top margin to avoid conflict with the close button on smaller screens */
+    }
+    /* The navigation links inside the overlay */
+    
+    .overlay a {
+        text-decoration: none;
+        color: #f0f0f0;
+    }
+    /* Display block instead of inline */
+    /* transition: 0.3s; */
+    /* Transition effects on hover (color) */
+    /* } */
+    /* When you mouse over the navigation links, change their color */
+    
+    .overlay a:hover {
+        color: powderblue;
+        text-decoration: none;
+    }
+    /* Position the close button (top right corner) */
+    
+    .overlay .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 45px;
+        font-size: 40px;
+        color: #f0f0f0;
+        z-index: 1;
+    }
+    /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+    
+    @media screen and (max-height: 450px) {
+        .overlay a {
+            font-size: 20px
+        }
+        .overlay .closebtn {
+            font-size: 40px;
+            top: 10px;
+            right: 35px;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+            height: auto;
+        }
+    }
+    /* When you mouse over the navigation links, change their color */
+    /* Position and style the close button (top right corner) */
+    /* Style the button that is used to open the sidepanel */
+    
+    .openbtn a:hover {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: rgba;
+        color: white;
+        padding: 10px;
+        border: none;
+    }
+    
+    .openbtn:hover {
+        background-color: #444;
+    }
+    /* part */
+    /* Remove default bullets */
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    /* #myUL1 {
+        margin: 15%;
+        padding: 0;
+    } */
+
+    .navBarUL {
+        list-style-type: none;
+        margin: 7%;
+        padding: 0;
+    }
+    
+    .caret {
+        font-size: 10px;
+        /* cursor: pointer; */
+        -webkit-user-select: none;
+        /* Safari 3.1+ */
+        -moz-user-select: none;
+        /* Firefox 2+ */
+        -ms-user-select: none;
+        /* IE 10+ */
+        user-select: none;
+        /* background-color: rgb(233, 233, 103); */
+        border-radius: 1rem;
+        font-weight: bolder;
+        color: rgb(205, 182, 50);
+    }
+    
+    .caret::before {
+        content: "\25B6";
+        color: black;
+        display: inline-block;
+        margin-right: 6px;
+    }
+    
+    .caret-down::before {
+        -ms-transform: rotate(90deg);
+        /* IE 9 */
+        -webkit-transform: rotate(90deg);
+        /* Safari */
+        transform: rotate(90deg);
+    }
+    
+    .active {
+        display: block;
+    }
+    
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 4px;
+        background-color: none;
+        height: auto;
+        display: block;
+    }
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    li a {
+        color: rgb(2, 1, 19);
+    }
+
+    li Link {
+        color: rgb(2, 1, 19);
+    }
+    
+    li .product {
+            font-size: 15px;
+            font-weight: bolder;
+            color: rgb(205, 182, 50);
+        }
+    
+    ul h4 {
+        color: whitesmoke;
+    }
+    .arrow {
+        border: solid rgb(255, 254, 253);
+        border-width:0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+      }
+      .right {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
